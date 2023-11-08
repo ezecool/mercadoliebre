@@ -1,67 +1,79 @@
-*{
+* {
     margin: 0px;
-    padding: 0px;    
+    padding: 0px;
     box-sizing: border-box;
 }
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     background-color: #ebebeb;
 }
 
-h3{
+h3 {
     font-size: 24px;
 }
 
-p{
+p {
     font-size: 12px;
 }
 
-div.top-header{
+div.top-header {
     display: flex;
-    flex-wrap: wrap;
-    padding: 5%;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem;
+    /* padding: 5%; */
 }
 
-header div.top-header p{
+header div.top-header p {
     width: 100%;
     text-align: center;
     margin-top: 10px;
 }
 
-header{
+header {
     background-color: #EAC926;
 }
 
-header div.logo,
-header .form{
-    width: 50%;
+.logo {
+    max-width: 10rem;
 }
 
-header div.logo{
+/* header div.logo {
+    max-width: 5rem;
+}
+
+header .form {
+    width: 50%;
+} */
+
+header div.logo {
     padding: 10px;
 }
-header .form{
+
+header .form {
     display: flex;
     align-items: center;
     padding: 2px;
     font-size: 11px;
 }
-header nav{
+
+header nav {
     font-size: 12px;
     margin-left: 20px;
 }
 
-header ul li{
+header ul li {
     list-style-type: none;
 }
 
-header ul li a{
+header ul li a {
     text-decoration: none;
     color: #000;
 }
 
-header .form .input{
+header .form .input {
     background-color: #FFF;
     border: 1px solid #000;
     outline: none;
@@ -69,18 +81,20 @@ header .form .input{
     padding: 2px;
 }
 
-header .form .submit{
+header .form .submit {
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
     width: 10%;
 }
 
-div.burger-menu{
+.abrir-burger-menu,
+.cerrar-burguer-menu {
     text-align: center;
+    display: none;
 }
 
-div.burger-menu i{
+div.burger-menu i {
     background-color: #0044AA;
     border-radius: 5px;
     color: #FFF;
@@ -91,61 +105,69 @@ div.burger-menu i{
     width: 40px;
 }
 
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    gap: 1rem;
+}
+
+
 div.last-visit,
-div.offers{
+div.offers {
     display: flex;
     flex-wrap: wrap;
 }
 
-.price{
+.price {
     font-size: 18px;
     width: 30%;
 }
 
-.discount{
+.discount {
     width: 70%;
 }
 
 .discount,
-.description{
+.description {
     font-size: 16px;
     font-weight: normal;
 }
 
 h3,
-.description{
+.description {
     color: #666;
 }
 
-.description{
+.description {
     display: none;
     margin-top: 20px;
 }
 
-section.banner img{
+section.banner img {
     width: 100%;
 }
 
-main{
+main {
     width: 90%;
     margin: 0 auto;
 }
 
-main section article{
-    background-color: #fff;    
+main section article {
+    background-color: #fff;
     margin: 10px 0px;
 }
 
-main section article img{
+main section article img {
     width: 100%;
 }
 
 main section article i,
-.discount{
+.discount {
     color: #39b54a;
 }
 
-main section article i{
+main section article i {
     display: block;
     font-size: 16px;
     padding: 5px;
@@ -159,19 +181,19 @@ main section article i{
     top: -15px;
 }
 
-main section h3{
+main section h3 {
     margin: 20px 0px;
 }
 
-main section div.products article i{
+main section div.products article i {
     transition: transform 1s;
 }
 
-main section div.products article:hover i{
+main section div.products article:hover i {
     transform: rotate(-90deg);
 }
 
-article div.main-article{
+article div.main-article {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -180,34 +202,80 @@ article div.main-article{
     position: relative;
     padding: 15px;
 }
-main section article:hover{
+
+main section article:hover {
     box-shadow: 0px 0px 10px rgb(100, 100, 100);
 }
-main section article:hover .description{
+
+main section article:hover .description {
     display: block;
 }
 
 .login input[type='submit']:hover,
-.register input[type='submit']:hover{
+.register input[type='submit']:hover {
     background-color: #0022AA;
 }
 
-@media (min-width: 361px){
-    main section div.products{
+@media (min-width: 361px) {
+    main section div.products {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
         align-items: flex-start;
     }
-    
-    main section div.products article{
+
+    main section div.products article {
         width: 45%;
     }
 
     .price,
-    .discount{
+    .discount {
         width: 50%;
+    }
+}
+
+@media screen and (max-width: 777px) {
+
+    .burger-menu,
+    .abrir-burguer-menu,
+    .cerrar-burguer-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+
+    .nav {
+        opacity: 0;
+        visibility: hidden;
+
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #1c1c1c;
+        padding: 2rem;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+    }
+
+    .nav.visible {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: end;
+    }
+
+    .nav-list li a {
+        color: #ebebeb;
     }
 }
 
@@ -237,8 +305,8 @@ footer section p {
     line-height: 20px;
 }
 
-@media (min-width: 769px){
-    main section div.products article{
+@media (min-width: 769px) {
+    main section div.products article {
         width: 22%;
     }
 }
