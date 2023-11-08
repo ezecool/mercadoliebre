@@ -37,6 +37,8 @@ header {
 }
 
 .logo {
+    width: 25%;
+    min-width: 8rem;
     max-width: 10rem;
 }
 
@@ -89,7 +91,7 @@ header .form .submit {
 }
 
 .abrir-burger-menu,
-.cerrar-burguer-menu {
+.cerrar-burger-menu {
     text-align: center;
     display: none;
 }
@@ -105,13 +107,11 @@ div.burger-menu i {
     width: 40px;
 }
 
-
 .nav-list {
     list-style-type: none;
     display: flex;
     gap: 1rem;
 }
-
 
 div.last-visit,
 div.offers {
@@ -237,9 +237,9 @@ main section article:hover .description {
 
 @media screen and (max-width: 777px) {
 
-    .burger-menu,
-    .abrir-burguer-menu,
-    .cerrar-burguer-menu {
+    /* .burger-menu, */
+    .abrir-burger-menu,
+    .cerrar-burger-menu {
         display: block;
         border: 0;
         font-size: 1.25rem;

@@ -1,11 +1,11 @@
-const abrirBurguer = document.querySelector('#abrir-burguer');
-const cerrarBurguer = document.querySelector('#cerrar-burguer');
+const abrirBurger = document.querySelector('#abrir-burger');
+const cerrarBurger = document.querySelector('#cerrar-burger');
 const nav = document.querySelector('#nav');
 
-abrirBurguer.addEventListener('click', () => {
+abrirBurger.addEventListener('click', () => {
   nav.classList.add('visible');
 });
 
-cerrarBurguer.addEventListener('click', () => {
+cerrarBurger.addEventListener('click', () => {
   nav.classList.remove('visible');
 })
