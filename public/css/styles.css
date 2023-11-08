@@ -211,6 +211,32 @@ main section article:hover .description{
     }
 }
 
+footer {
+    background-color: white;
+}
+
+footer section {
+    text-align: center;
+    margin: 20px;
+    padding: 20px;
+}
+
+footer section i {
+    font-size: xx-large;
+    color: #1259c3;
+}
+
+footer section h3 {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+footer section p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
 @media (min-width: 769px){
     main section div.products article{
         width: 22%;
